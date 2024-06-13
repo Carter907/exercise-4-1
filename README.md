@@ -2,21 +2,20 @@
 BEGIN
 	CLASS Program
 		Main METHOD
-			PRINT
--	"enter a number:");
-    			VAR num = Convert.ToInt32(Console.ReadLine());
+    			VAR num = CONVERT TO INT (PROMPT USER("enter a number:"))
     			VAR sum = 0;
-    			for (var i = num-1; i > 0; i--) {
-      				if (num % i == 0) {
+    			VAR i = num - 1, while i > 0, decrement i {
+      				IF num is divisible by i THEN {
         				sum += i;
       				}
     			}
-    			if (sum == num) {
-      				Console.WriteLine("Perfect Number");
-    			} else {
-      				Console.WriteLine("Not A Perfect Number");
+    			if sum equals num THEN {
+      				PRINT
+				 - "Perfect Number"
+    			} ELSE {
+      				PRINT
+				 - "Not A Perfect Number"
     			}
-    			Console.WriteLine("Passed");
 		END Main
 	END Program
 END
